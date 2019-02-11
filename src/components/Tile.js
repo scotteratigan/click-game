@@ -3,7 +3,6 @@ import { Button, Col } from 'react-bootstrap';
 
 function Tile(props) {
 	const { id, label, clickTile } = props;
-	console.log('Received props:', props);
 	return (
 		<>
 			<Col xs={4}>

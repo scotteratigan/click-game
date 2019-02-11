@@ -6,14 +6,26 @@ import Footer from './components/Footer';
 import GameTiles from './gameTiles.json';
 
 class App extends Component {
-  clickTile(tileId) {
-    alert('You clicked: ' + tileId);
+  constructor() {
+    super();
+    this.state = { tiles: GameTiles };
+  }
+  clickTile = (clickedTileId) => {
+    console.log('You clicked: ' + clickedTileId);
+    this.state.tiles.forEach(tile => {
+      if (tile.id === clickedTileId) {
+        // alert('You clicked ' + tile.text);
+        tile.clicked = true;
+      }
+    });
+    console.log(this.state.tiles);
   }
   render() {
+    console.log(this.state.tiles);
     return (
       <div className="App">
         <Header />
-        <GameArea gameTiles={GameTiles} clickTile={this.clickTile} />
+        <GameArea gameTiles={this.state.tiles} clickTile={this.clickTile} />
         <Footer />
       </div>
     );
