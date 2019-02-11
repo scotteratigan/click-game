@@ -1,12 +1,14 @@
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row } from 'react-bootstrap';
 import Tile from './Tile';
 
-function GameArea() {
-	let tileArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+function GameArea(props) {
+	const gameTiles = props.gameTiles;
 	let tileJSX = [];
-	tileArray.forEach(tile => {
-		tileJSX.push(<Tile></Tile>);
+	gameTiles.forEach(tile => {
+		console.log('Redering tile:', tile);
+		console.log('Text is:', tile.text);
+		tileJSX.push(<Tile key={tile.id} id={tile.id} label={tile.text} clickTile={props.clickTile}></Tile>);
 	});
 	return (
 		<main>
