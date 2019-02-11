@@ -1,6 +1,8 @@
 import React from 'react';
 import { Button, Container } from 'react-bootstrap';
 
+// todo: add win condition based on score here.
+
 function GameOver(props) {
 	return (
 		<main>
