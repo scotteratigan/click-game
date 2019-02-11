@@ -15,34 +15,32 @@ class App extends Component {
     this.state = { tiles, gameInProgress: true, score: 0, highScore: 0 };
   }
   clickTile = clickedTileId => {
-    console.log('Tile clicked, highscore is:', this.state.highScore);
     const tiles = [...this.state.tiles];
-    for (let i = 0; i < tiles.length; i++) {
-      if (tiles[i].id === clickedTileId) {
-        if (tiles[i].clicked === true) {
-          // they've already clicked this tile, game should now be over:
-          this.setState({ gameInProgress: false });
-        }
-        else {
-          tiles[i].clicked = true;
-          const score = this.state.score + 1
-          const highScore = score > this.state.highScore ? score : this.state.highScore;
-          this.setState({ tiles, score, highScore });
-        }
+    tiles.forEach((tile, index) => {
+      if (tile.id === clickedTileId && tile.alreadyGuessed) {
+        this.setState({ gameInProgress: false }); // game over
+        return
       }
-    }
-    setTimeout(() => {
-      console.log('GameTiles are now:', GameTiles);
-      console.log('Tiles are now:', this.state.tiles);
-    }, 1);
+      if (tile.id === clickedTileId) {
+        tiles[index].alreadyGuessed = true;
+      }
+      const score = this.state.score + 1
+      const highScore = score > this.state.highScore ? score : this.state.highScore;
+      this.setState({ tiles, score, highScore });
+      if (score === tiles.length) {
+        console.log('You win!');
+      }
+    }, this);
   }
   resetGame = () => {
-    const tiles = this.state.tiles;
+    const tiles = [...GameTiles];
     tiles.forEach(tile => {
       // currently resetting manually, not sure why the array isn't resetting to the JSON file though.
-      tile.clicked = false;
+      tile.alreadyGuessed = false;
     });
-    this.setState({ tiles, gameInProgress: true, score: 0, highScore: this.state.highScore });
+    this.setState((prevState) => {
+      return { tiles, gameInProgress: true, score: 0, highScore: prevState.highScore }
+    });
   }
   render() {
     return (

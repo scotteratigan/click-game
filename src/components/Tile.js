@@ -1,16 +1,15 @@
 import React from 'react';
-import { Button, Col } from 'react-bootstrap';
+import { Col } from 'react-bootstrap';
+// import testPic from './../../public/images/andre_iguodala';
 
 function Tile(props) {
-	const { id, label, clickTile } = props;
+	const { clickTile } = props;
+	const { id, name, photo } = props.tile;
 	return (
-		<>
-			<Col xs={4}>
-				<Button id={id} className='px-5 my-3' onClick={() => clickTile(id)}>
-					{label}
-				</Button>
-			</Col>
-		</>
+		<Col xs={4} lg={3}>
+			{/* <img id={id} className='px-5 my-3' src="/images/andre_iguodala.png" alt={label} onClick={() => clickTile(id)} /> */}
+			<img id={id} className='px-5 my-3' src={photo} alt={name} onClick={() => clickTile(id)} />
+		</Col>
 	);
 }
 
