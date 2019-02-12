@@ -3,7 +3,7 @@ import { Button, Container } from 'react-bootstrap';
 
 // todo: add win condition based on score here.
 
-function GameOver(props) {
+function GameLost(props) {
 	return (
 		<main>
 			<Container className='text-center'>
@@ -15,4 +15,4 @@ function GameOver(props) {
 	);
 }
 
-export default GameOver;
+export default GameLost;

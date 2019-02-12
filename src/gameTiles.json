@@ -2,73 +2,73 @@
 	{
 		"id": 1,
 		"alreadyGuessed": false,
-		"photo": "/images/andre_iguodala.png",
+		"photo": "images/andre_iguodala.png",
 		"name": "Andre Iguodala"
 	},
 	{
 		"id": 2,
 		"alreadyGuessed": false,
-		"photo": "/images/damian_jones.png",
+		"photo": "images/damian_jones.png",
 		"name": "Damian Jones"
 	},
 	{
 		"id": 3,
 		"alreadyGuessed": false,
-		"photo": "/images/demarcus_cousins.png",
+		"photo": "images/demarcus_cousins.png",
 		"name": "DeMarcus Cousins"
 	},
 	{
 		"id": 4,
 		"alreadyGuessed": false,
-		"photo": "/images/draymond_green.png",
+		"photo": "images/draymond_green.png",
 		"name": "Draymond Green"
 	},
 	{
 		"id": 5,
 		"alreadyGuessed": false,
-		"photo": "/images/jonas_jerebko.png",
+		"photo": "images/jonas_jerebko.png",
 		"name": "Jonas Jerebko"
 	},
 	{
 		"id": 6,
 		"alreadyGuessed": false,
-		"photo": "/images/jordan_bell.png",
+		"photo": "images/jordan_bell.png",
 		"name": "Jordan Bell"
 	},
 	{
 		"id": 7,
 		"alreadyGuessed": false,
-		"photo": "/images/kevin_durant.png",
+		"photo": "images/kevin_durant.png",
 		"name": "Kevin Durant"
 	},
 	{
 		"id": 8,
 		"alreadyGuessed": false,
-		"photo": "/images/kevon_looney.png",
+		"photo": "images/kevon_looney.png",
 		"name": "Kevon Looney"
 	},
 	{
 		"id": 9,
 		"alreadyGuessed": false,
-		"photo": "/images/klay_thompson.png",
+		"photo": "images/klay_thompson.png",
 		"name": "Klay Thompson"
 	},
 	{
 		"id": 10,
 		"alreadyGuessed": false,
-		"photo": "/images/quinn_cook.png",
+		"photo": "images/quinn_cook.png",
 		"name": "Quinn Cook"
 	},
 	{
 		"id": 11,
 		"alreadyGuessed": false,
-		"photo": "/images/shaun_livingston.png",
+		"photo": "images/shaun_livingston.png",
 		"name": "Shaun Livingston"
 	},
 	{
 		"id": 12,
 		"alreadyGuessed": false,
-		"photo": "/images/stephen_curry.png",
+		"photo": "images/stephen_curry.png",
 		"name": "Stephen Curry"
 	}
 ]

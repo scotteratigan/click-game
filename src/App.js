@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 // import './App.css';
 import Header from './components/Header';
 import GameArea from './components/GameArea';
-import GameOver from './components/GameOver';
+import GameLost from './components/GameLost';
 import Footer from './components/Footer';
 import GameTiles from './gameTiles.json';
 
@@ -27,10 +27,11 @@ class App extends Component {
       const score = this.state.score + 1
       const highScore = score > this.state.highScore ? score : this.state.highScore;
       this.setState({ tiles, score, highScore });
-      if (score === tiles.length) {
-        console.log('You win!');
-      }
     }, this);
+    if (this.state.score === 3) { // tiles.length
+      alert('You win!');
+      return;
+    }
   }
   resetGame = () => {
     const tiles = [...GameTiles];
@@ -46,7 +47,7 @@ class App extends Component {
     return (
       <div className="App">
         <Header gameInProgress={this.state.gameInProgress} score={this.state.score} highScore={this.state.highScore} />
-        {this.state.gameInProgress ? <GameArea gameTiles={this.state.tiles} clickTile={this.clickTile} /> : <GameOver score={this.state.score} playAgain={this.resetGame} />}
+        {this.state.gameInProgress ? <GameArea gameTiles={this.state.tiles} clickTile={this.clickTile} /> : <GameLost score={this.state.score} playAgain={this.resetGame} />}
         <Footer />
       </div>
     );

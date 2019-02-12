@@ -18,7 +18,7 @@ function GameArea(props) {
 	const shuffledGameTiles = shuffleArray(gameTiles);
 	let tileJSX = [];
 	shuffledGameTiles.forEach(tile => {
-		console.log('tile is:', tile);
+		// console.log('tile is:', tile);
 		tileJSX.push(<Tile key={tile.id} tile={tile} clickTile={props.clickTile}></Tile>);
 	});
 	return (
