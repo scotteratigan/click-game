@@ -1,4 +1,5 @@
 # Warriors Memory Game
+[Play the Game!](https://scotteratigan.github.io/click-game/)
 
 ## A Stateful React app
 
