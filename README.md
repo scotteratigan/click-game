@@ -16,8 +16,8 @@
 ## Technical Info
 - Mostly uses bootstrap for spacing/styling with some custom css loaded on a per-component basis
 - Heavily utilizes ES6 syntax whenever possible - .map, .forEach, object destructuring, ternary conditional JSX renders
-- <Tile /> component Shuffling implemented via Fisher-Yates algorithm
-- <Tile /> component keys are equal to player's jersey numbers.
+- ```<Tile />``` component Shuffling implemented via Fisher-Yates algorithm
+- ```<Tile />``` component keys are equal to player's jersey numbers.
 
 ## To Install
 - clone the repo
