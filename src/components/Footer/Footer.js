@@ -14,7 +14,7 @@ function Footer() {
 					LinkedIn Profile
 				</a>
 				|
-				<a href='https://github.com/scotteratigan/portfolio.html' className='px-3 text-white'>
+				<a href='https://scotteratigan.github.io/portfolio.html' className='px-3 text-white'>
 					My Other Projects
 				</a>
 			</div>
