@@ -7,11 +7,7 @@ import Footer from './components/Footer/';
 import warriorsPlayerData from './gameTiles.json';
 
 class App extends Component {
-  constructor() {
-    // todo: change this to a more simple initialization:
-    super();
-    this.state = { tiles: warriorsPlayerData, gameState: 'playing', score: 0, highScore: 0 };
-  }
+  state = { tiles: warriorsPlayerData, gameState: 'playing', score: 0, highScore: 0 };
 
   handleTileClick = clickedTileId => {
     const tiles = [...this.state.tiles];
@@ -27,7 +23,7 @@ class App extends Component {
         tiles[index].alreadyGuessed = true;
         const newScore = this.state.score + 1
         const highScore = newScore > this.state.highScore ? newScore : this.state.highScore;
-        this.setState({ tiles, score: newScore, highScore, lastTileClicked: tile });
+        this.setState({ score: newScore, highScore, lastTileClicked: tile });
         if (newScore === tiles.length) {
           this.setState({ gameState: 'won' })
         }
@@ -38,7 +34,7 @@ class App extends Component {
   resetGame = () => {
     const tiles = [...warriorsPlayerData];
     tiles.forEach(tile => tile.alreadyGuessed = false);
-    this.setState(prevState => ({ tiles, gameState: 'playing', score: 0, highScore: prevState.highScore }));
+    this.setState({ tiles, gameState: 'playing', score: 0 });
   }
 
   render() {
