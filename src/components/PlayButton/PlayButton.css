@@ -1,7 +1,7 @@
 #playButton {
 	background: rgb(0, 51, 153);
 	border-color: rgb(0, 34, 102);
-	color: rgb(255, 204, 51);
+	color: white;
 }
 
 #playButton:hover {
