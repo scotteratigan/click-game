@@ -1,12 +1,14 @@
 import React from 'react';
-import { Button, Container } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
+import PlayButton from './../PlayButton/';
 
 const GameWon = props => {
+	const { playAgain } = props;
 	return (
 		<main>
 			<Container className='text-center'>
 				<h1>Perfect game!</h1>
-				<Button btn-primary="true" className="m-3" onClick={() => props.playAgain()}>Play Again</Button>
+				<PlayButton playAgain={playAgain} />
 			</Container>
 		</main>
 	);

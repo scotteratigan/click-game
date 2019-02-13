@@ -1,0 +1,13 @@
+#playButton {
+	background: rgb(0, 51, 153);
+	border-color: rgb(0, 34, 102);
+	color: rgb(255, 204, 51);
+}
+
+#playButton:hover {
+	background: rgb(0, 77, 230);
+}
+
+#playButton:active {
+	background: rgb(4, 12, 27);
+}

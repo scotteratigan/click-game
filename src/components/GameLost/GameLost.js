@@ -1,9 +1,10 @@
 import React from 'react';
-import { Button, Container } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import Quote from './../Quote/';
+import PlayButton from './../PlayButton/';
 
 function GameLost(props) {
-	const { score, highScore, lastTileClicked } = props;
+	const { score, highScore, lastTileClicked, playAgain } = props;
 	return (
 		<main>
 			<Container className='text-center'>
@@ -12,7 +13,7 @@ function GameLost(props) {
 					{score === highScore ? <>, a high score!</> : null}
 				</h2>
 				<Quote lastTileClicked={lastTileClicked}></Quote>
-				<Button btn-primary="true" className="m-3" onClick={() => props.playAgain()}>Play Again</Button>
+				<PlayButton playAgain={playAgain} />
 			</Container>
 		</main>
 	);

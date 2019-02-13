@@ -4,13 +4,13 @@ import GameArea from './components/GameArea/';
 import GameLost from './components/GameLost/';
 import GameWon from './components/GameWon/';
 import Footer from './components/Footer/';
-import GameTiles from './gameTiles.json';
+import warriorsPlayerData from './gameTiles.json';
 
 class App extends Component {
   constructor() {
     // todo: change this to a more simple initialization:
     super();
-    this.state = { tiles: GameTiles, gameState: 'playing', score: 0, highScore: 0 };
+    this.state = { tiles: warriorsPlayerData, gameState: 'playing', score: 0, highScore: 0 };
   }
 
   handleTileClick = clickedTileId => {
@@ -36,7 +36,7 @@ class App extends Component {
   }
 
   resetGame = () => {
-    const tiles = [...GameTiles];
+    const tiles = [...warriorsPlayerData];
     tiles.forEach(tile => tile.alreadyGuessed = false);
     this.setState(prevState => ({ tiles, gameState: 'playing', score: 0, highScore: prevState.highScore }));
   }
